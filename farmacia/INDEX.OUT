@@ -1,0 +1,198 @@
+
+
+
+                           SIMAN IV - License #9150435
+                                   ETS DE GIJON                   
+
+                         Summary for Replication 1 of 5
+  
+ Project:  FARMACIA                             Run execution date :  18/ 7/2022
+ Analyst:  GRUPO13                              Model revision date:  18/ 7/2022
+  
+ Replication ended at time      : 480.0
+  
+                                 TALLY VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Observations
+ _______________________________________________________________________________
+  
+ TIEMPO PROM FAMACEUTIC  10.638     .55705     .00000     28.592        156    
+ TIEMPO PROM APRENDIZ    142.84     .59864     .00000     324.83         85    
+  
+                            DISCRETE-CHANGE VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Final Value 
+ _______________________________________________________________________________
+  
+ COLA FARMACEUTICO       3.4969     .23762     .00000     4.0000     3.0000    
+ COLA APRENDIZ           115.96     .67593     .00000     247.00     247.00    
+ COLA CAJERO             .49572     2.4648     .00000     8.0000     .00000    
+ UTIL FARMACEUTICO       .99816     .04297     .00000     1.0000     1.0000    
+ UTIL APRENDIZ           .94521     .24076     .00000     1.0000     1.0000    
+ UTIL CAJERO             .48107     1.0386     .00000     1.0000     .00000    
+  
+                                     COUNTERS
+  
+                     Identifier                Count   Limit
+                     _________________________________________
+  
+                     CANT PERS AT FARM           155  Infinite
+
+
+
+                           SIMAN IV - License #9150435
+                                   ETS DE GIJON                   
+
+                         Summary for Replication 2 of 5
+  
+ Project:  FARMACIA                             Run execution date :  18/ 7/2022
+ Analyst:  GRUPO13                              Model revision date:  18/ 7/2022
+  
+ Replication ended at time      : 480.0
+  
+                                 TALLY VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Observations
+ _______________________________________________________________________________
+  
+ TIEMPO PROM FAMACEUTIC  9.3548     .53751     .00000     21.947        175    
+ TIEMPO PROM APRENDIZ    188.23     .60932     .00000     385.89         69    
+  
+                            DISCRETE-CHANGE VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Final Value 
+ _______________________________________________________________________________
+  
+ COLA FARMACEUTICO       3.4593     .24287     .00000     4.0000     4.0000    
+ COLA APRENDIZ           131.25     .55452     .00000     249.00     249.00    
+ COLA CAJERO             .38626     2.4704     .00000     6.0000     .00000    
+ UTIL FARMACEUTICO       .99972     .01671     .00000     1.0000     1.0000    
+ UTIL APRENDIZ           .99666     .05792     .00000     1.0000     1.0000    
+ UTIL CAJERO             .49714     1.0057     .00000     1.0000     1.0000    
+  
+                                     COUNTERS
+  
+                     Identifier                Count   Limit
+                     _________________________________________
+  
+                     CANT PERS AT FARM           174  Infinite
+
+
+
+                           SIMAN IV - License #9150435
+                                   ETS DE GIJON                   
+
+                         Summary for Replication 3 of 5
+  
+ Project:  FARMACIA                             Run execution date :  18/ 7/2022
+ Analyst:  GRUPO13                              Model revision date:  18/ 7/2022
+  
+ Replication ended at time      : 480.0
+  
+                                 TALLY VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Observations
+ _______________________________________________________________________________
+  
+ TIEMPO PROM FAMACEUTIC  10.115     .61699     .00000     35.135        163    
+ TIEMPO PROM APRENDIZ    164.90     .65194     .00000     346.65         84    
+  
+                            DISCRETE-CHANGE VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Final Value 
+ _______________________________________________________________________________
+  
+ COLA FARMACEUTICO       3.4750     .24192     .00000     4.0000     4.0000    
+ COLA APRENDIZ           103.36     .62507     .00000     230.00     229.00    
+ COLA CAJERO             .67575     1.6917     .00000     6.0000     .00000    
+ UTIL FARMACEUTICO       1.0000     .00000     .00000     1.0000     1.0000    
+ UTIL APRENDIZ           .98328     .13039     .00000     1.0000     1.0000    
+ UTIL CAJERO             .55972     .88691     .00000     1.0000     .00000    
+  
+                                     COUNTERS
+  
+                     Identifier                Count   Limit
+                     _________________________________________
+  
+                     CANT PERS AT FARM           162  Infinite
+
+
+
+                           SIMAN IV - License #9150435
+                                   ETS DE GIJON                   
+
+                         Summary for Replication 4 of 5
+  
+ Project:  FARMACIA                             Run execution date :  18/ 7/2022
+ Analyst:  GRUPO13                              Model revision date:  18/ 7/2022
+  
+ Replication ended at time      : 480.0
+  
+                                 TALLY VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Observations
+ _______________________________________________________________________________
+  
+ TIEMPO PROM FAMACEUTIC  10.385     .63413     .00000     37.861        159    
+ TIEMPO PROM APRENDIZ    167.03     .58616     .00000     351.51         68    
+  
+                            DISCRETE-CHANGE VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Final Value 
+ _______________________________________________________________________________
+  
+ COLA FARMACEUTICO       3.4958     .24752     .00000     4.0000     4.0000    
+ COLA APRENDIZ           117.18     .61206     .00000     247.00     247.00    
+ COLA CAJERO             .37165     2.3240     .00000     5.0000     .00000    
+ UTIL FARMACEUTICO       .99875     .03536     .00000     1.0000     1.0000    
+ UTIL APRENDIZ           .99271     .08568     .00000     1.0000     1.0000    
+ UTIL CAJERO             .47047     1.0609     .00000     1.0000     .00000    
+  
+                                     COUNTERS
+  
+                     Identifier                Count   Limit
+                     _________________________________________
+  
+                     CANT PERS AT FARM           158  Infinite
+
+
+
+                           SIMAN IV - License #9150435
+                                   ETS DE GIJON                   
+
+                         Summary for Replication 5 of 5
+  
+ Project:  FARMACIA                             Run execution date :  18/ 7/2022
+ Analyst:  GRUPO13                              Model revision date:  18/ 7/2022
+  
+ Replication ended at time      : 480.0
+  
+                                 TALLY VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Observations
+ _______________________________________________________________________________
+  
+ TIEMPO PROM FAMACEUTIC  10.191     .54084     .00000     26.623        163    
+ TIEMPO PROM APRENDIZ    152.33     .62163     .00000     326.62         91    
+  
+                            DISCRETE-CHANGE VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Final Value 
+ _______________________________________________________________________________
+  
+ COLA FARMACEUTICO       3.5487     .22235     .00000     4.0000     4.0000    
+ COLA APRENDIZ           102.85     .56678     .00000     220.00     220.00    
+ COLA CAJERO             .37488     2.0908     .00000     4.0000     .00000    
+ UTIL FARMACEUTICO       .99803     .04438     .00000     1.0000     1.0000    
+ UTIL APRENDIZ           .99088     .09594     .00000     1.0000     1.0000    
+ UTIL CAJERO             .51144     .97737     .00000     1.0000     .00000    
+  
+                                     COUNTERS
+  
+                     Identifier                Count   Limit
+                     _________________________________________
+  
+                     CANT PERS AT FARM           162  Infinite
+  
+ Run Time: 0 min(s)  7 sec(s)
+ Simulation run complete.

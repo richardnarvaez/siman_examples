@@ -1,0 +1,24 @@
+BEGIN;
+    PROJECT, BANCO, PROFESOR, 7/23/2020;
+    DISCRETE, 100, 2, 3;
+    TALLIES:    1, TIPO SISTEMA VE: 
+                2, TIPO SISTEMA CA:
+                3, TIPO SISTEMA SB;
+    COUNTERS:   1, ATENDIDOS VE:
+                2, ATENDIDOS CA: 
+                3, ATENDIDOS SB;
+    RESOURCES:  1, ventanilla, 3:
+                2, Cajero, 2:
+                3, servicio;
+    PARAMETERS: 1, 3:
+                2,2:
+                3,1:
+                4,5;
+    DSTAT:      1, NQ(1), COLA VENTANILLA: 
+                2, NQ(2), COLA CAJERO:
+                3, NQ(3), COLA SERV BANC: 
+                4, NR(1), UTIL VENTANILLA:
+                5, NR(2), UTIL CAJERO: 
+                6, NR(3), UTIL SERV BANC;
+    REPLICATE, 1, 0, 480;
+END;

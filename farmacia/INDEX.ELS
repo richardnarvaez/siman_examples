@@ -1,0 +1,21 @@
+      BEGIN;                                                                    
+    1 PROJECT,FARMACIA,GRUPO13,18/07/2022;                                      
+    2 DISCRETE,300,2,3;                                                         
+    3 PARAMETERS: 1, 1 :                                                        
+      2, 3 :                                                                    
+      3, 6 :                                                                    
+      4, 1 ;                                                                    
+    4 RESOURCES:1, FARMACEUTICO:                                                
+      2, APRENDIZ:                                                              
+      3, CAJERO;                                                                
+    5 TALLIES:1, TIEMPO PROM FAMACEUTICO:                                       
+      2, TIEMPO PROM APRENDIZ;                                                  
+    6 COUNTERS: 1, CANT PERS AT FARM;                                           
+    7 DSTAT:1, NQ(1), COLA FARMACEUTICO:                                        
+      2, NQ(2), COLA APRENDIZ:                                                  
+      3, NQ(3), COLA CAJERO:                                                    
+      4, NR(1), UTIL FARMACEUTICO:                                              
+      5, NR(2), UTIL APRENDIZ:                                                  
+      6, NR(3), UTIL CAJERO;                                                    
+    8 REPLICATE, 5, 0, 480;                                                     
+      END;                                                                      

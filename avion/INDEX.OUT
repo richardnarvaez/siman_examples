@@ -1,0 +1,46 @@
+
+
+
+                           SIMAN IV - License #9150435
+                                   ETS DE GIJON                   
+
+                         Summary for Replication 1 of 1
+  
+ Project:  base                                 Run execution date :  18/ 7/2022
+ Analyst:  GRUPO13                              Model revision date:  18/ 7/2022
+  
+ Replication ended at time      : 175200.
+  
+                                 TALLY VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Observations
+ _______________________________________________________________________________
+  
+ TPESPERABASE            .14948     9.4868     .00000     13.453         90    
+ TPESPERAEXT             1.1260     5.5741     .00000     50.555        100    
+ TPBASE EXT              24609.     .63406     2388.8     62809.         36    
+  
+                            DISCRETE-CHANGE VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Final Value 
+ _______________________________________________________________________________
+  
+ CTALLERM                16.724     .55637     .00000     29.000     28.000    
+ CTRACTOR                .71949E-03 37.268     .00000     1.0000     .00000    
+ CTALLERP                .23990E-04 204.16     .00000     1.0000     .00000    
+ UTALLERM                .97927     .14550     .00000     1.0000     1.0000    
+ UTRACTOR                .01846     7.2914     .00000     1.0000     .00000    
+ UTALLERP                .00757     11.449     .00000     1.0000     .00000    
+  
+                                     COUNTERS
+  
+                     Identifier                Count   Limit
+                     _________________________________________
+  
+                     ATENTIDOS BA                 48  Infinite
+                     ATENTIDOS EX                 36  Infinite
+                     PRIMERA BA                   35  Infinite
+                     PRIMERA EX                   30  Infinite
+  
+ Run Time: 0 min(s)  1 sec(s)
+ Simulation run complete.

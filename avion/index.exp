@@ -1,0 +1,35 @@
+BEGIN;
+    PROJECT, base, GRUPO13, 18/07/2022;
+    DISCRETE, 100, 6, 3;
+    
+    TALLIES:    1,TPESPERABASE:
+                2,TPESPERAEXT:
+                3,TPBASE EXT;
+
+    COUNTERS:   1,ATENTIDOS BA:
+                2,ATENTIDOS EX:
+                3,PRIMERA BA:
+                4,PRIMERA EX;
+
+    RESOURCES:  1,TALLERMANTENIMIENTO:
+                2,REMOLQUE:
+                3,TALLERPRUEBA;
+
+    PARAMETERS: 1,10:
+                2,15:
+                3,2880:
+                4,4320:
+                5,15:
+                6,1440:
+                7,20:
+                8,10;
+
+    DSTAT:      1,NQ(1),CTALLERM:
+                2,NQ(2),CTRACTOR:
+                3,NQ(3),CTALLERP:
+                4,NR(1),UTALLERM:
+                5,NR(2),UTRACTOR:
+                6,NR(3),UTALLERP;
+
+    REPLICATE, 1, 0, 175200;
+END;

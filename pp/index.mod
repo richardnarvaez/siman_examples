@@ -1,0 +1,34 @@
+BEGIN;
+    
+    CREATE: EX(1, 2): MARK(1);
+    ASSIGN: A(3)=1: NEXT(PROCESSM1);
+
+    CREATE: EX(2, 2): MARK(1);
+    ASSIGN: A(3)=2: NEXT(PROCESSM2);
+    
+    PROCESSM1 QUEUE, 1;
+        SEIZE: MAQUINA1;
+        DELAY: EX(3, 2);
+        RELEASE: MAQUINA1;
+
+    BRANCH, 1:
+        IF, A(3) .EQ. 1, TRASLADO:
+        ELSE, PROCESSM2;
+
+    PROCESSM2 QUEUE, 2;
+        SEIZE: MAQUINA2;
+        DELAY: EX(3, 2);
+        RELEASE: MAQUINA2;
+    
+    BRANCH, 1:
+        IF, A(3) .EQ. 2, TRASLADO:
+        ELSE, PROCESSM1;
+
+    TRASLADO QUEUE, 3;
+        SEIZE: MONTACARGAS;
+        DELAY: EX(3, 2);
+        RELEASE: MONTACARGAS;
+    
+    SALIDA TALLY: 1, INT(1): DISPOSE;
+
+END;

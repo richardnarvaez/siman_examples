@@ -1,0 +1,22 @@
+      BEGIN;                                                                    
+    1 PROJECT, SOLI,  GRUPO13, 18/07/2022;                                      
+    2 DISCRETE, 200, 3, 3;                                                      
+    3 TALLIES: 1, TIEMPO SOL MED;                                               
+    4 COUNTERS: 1, SOL ADMINISTRATIVAS:                                         
+      2, SOL MEDICAS:                                                           
+      3, PED IEES;                                                              
+    5 RESOURCES: 1, VENTANILLA:                                                 
+      2, ADMINISTRADOR:                                                         
+      3, MEDICO;                                                                
+    6 PARAMETERS: 1,4:                                                          
+      2,3.33:                                                                   
+      3,5:                                                                      
+      4,3,5;                                                                    
+    7 DSTAT: 1, NQ(1), COLA VENTANILLA:                                         
+      2, NQ(2), COLA ADMINISTRACION:                                            
+      3, NQ(3), COLA AUDITORIA:                                                 
+      4, NR(1), UTIL VENTANILLA:                                                
+      5, NR(2), UTIL ADMINISTRACION:                                            
+      6, NR(3), UTIL AUDITORIA;                                                 
+    8 REPLICATE, 1, 0, 480;                                                     
+      END;                                                                      

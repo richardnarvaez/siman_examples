@@ -1,0 +1,29 @@
+      BEGIN;                                                                    
+                                                                                
+    1 CREATE: EX(1,2): MARK(1);                                                 
+    2 BRANCH, 1:                                                                
+          WITH, 0.5, VENT:                                                      
+          WITH, 0.3, CAJERO:                                                    
+          WITH, 0.2, SB;                                                        
+                                                                                
+    3 VENT ASSIGN: A(2) = 1;                                                    
+    4     QUEUE, 1;                                                             
+    5     SEIZE: Ventanilla;                                                    
+    6     DELAY: NP(2, 3);                                                      
+    7     RELEASE: Ventanilla: NEXT(SALIDA);                                    
+                                                                                
+    8 CAJERO ASSIGN: A(2) = 2;                                                  
+    9     QUEUE, 2;                                                             
+   10     SEIZE: Cajero;                                                        
+   11     DELAY: NP(3, 3);                                                      
+   12     RELEASE: Cajero: NEXT(SALIDA);                                        
+                                                                                
+   13 SB  ASSIGN: A(2) = 3;                                                     
+   14     QUEUE, 3;                                                             
+   15     SEIZE: Servicio;                                                      
+   16     DELAY: NP(4, 5);                                                      
+   17     RELEASE: Servicio;                                                    
+                                                                                
+   18 SALIDA COUNT: A(2);                                                       
+   19     TALLY: A(2), INT(1): DISPOSE;                                         
+      END;                                                                      

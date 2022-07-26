@@ -1,0 +1,65 @@
+      BEGIN;                                                                    
+                                                                                
+    1     CREATE: EX(3,2):MARK(1);                                              
+    2     ASSIGN: A(2)=1:NEXT(CONTADOR);                                        
+                                                                                
+    3     CREATE: EX(4,1):MARK(1);                                              
+    4     ASSIGN:A(2)=2:NEXT(CONTADOR);                                         
+                                                                                
+    5     CONTADOR    ASSIGN:A(5)=0;                                            
+    6                 ASSIGN:A(6)=EX(5,1);                                      
+                                                                                
+    7     TALLERM     ASSIGN:A(3)=1;                                            
+    8                 ASSIGN:A(5)=A(5)+1;                                       
+                                                                                
+    9     QUEUE,1;                                                              
+                                                                                
+   10     SEIZE,A(2):TALLERMANTENIMIENTO;                                       
+   11     DELAY:EX(6,1);                                                        
+   12     RELEASE:TALLERMANTENIMIENTO;                                          
+                                                                                
+   13     TRACTOR QUEUE,2:MARK(4);                                              
+   14     SEIZE:REMOLQUE;                                                       
+   15     TALLY:A(2),INT(4);                                                    
+   16     DELAY:A(6);                                                           
+   17     RELEASE:REMOLQUE;                                                     
+                                                                                
+   18     BRANCH, 1:                                                            
+              IF, A(3) .EQ. 1, TALLERP:                                         
+              IF, A(3) .EQ. 2, TALLERM:                                         
+              IF, A(3) .EQ. 3, COMPARARPISTA;                                   
+                                                                                
+   19     TALLERP QUEUE,3;                                                      
+   20     SEIZE:TALLERPRUEBA;                                                   
+   21     DELAY:EX(A(2),1);                                                     
+   22     RELEASE:TALLERPRUEBA;                                                 
+                                                                                
+   23     ASSIGN:A(3)=2;                                                        
+                                                                                
+   24     BRANCH,1:                                                             
+              IF,A(2) . EQ. 1, COMPARARB:                                       
+              ELSE, COMPARAREX;                                                 
+   25         COMPARARB BRANCH,1:                                               
+              WITH, 0.25, TRACTOR:                                              
+              WITH, 0.75, COMPARANAVE;                                          
+                                                                                
+   26     COMPARANAVE BRANCH,1:                                                 
+              IF,A(5) .EQ. 1, CONTADORNAVE:                                     
+              ELSE, NAVEPRINCIPAL;                                              
+   27         CONTADORNAVE COUNT:3,1:NEXT(NAVEPRINCIPAL);                       
+   28         NAVEPRINCIPAL DELAY:EX(8,4);                                      
+   29         COUNT:1,1: DISPOSE;                                               
+   30         COMPARAREX BRANCH,1:                                              
+              WITH, 0.30, TRACTOR:                                              
+              WITH, 0.70, TRACTORCOMPARARPISTA;                                 
+                                                                                
+   31     TRACTORCOMPARARPISTA ASSIGN: A(6)= EX(7,1);                           
+   32     ASSIGN: A(3)=3:NEXT(TRACTOR);                                         
+                                                                                
+   33     COMPARARPISTA BRANCH,1:                                               
+              IF,A(5) .EQ. 1, CONTADORPISTA :                                   
+              ELSE, PISTAPRINCIPAL;                                             
+   34         CONTADORPISTA COUNT: 4, 1: NEXT(PISTAPRINCIPAL);                  
+   35         PISTAPRINCIPAL COUNT: 2,1;                                        
+   36         TALLY: 3, INT(1):DISPOSE;                                         
+      END;                                                                      

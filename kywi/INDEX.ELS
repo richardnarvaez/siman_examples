@@ -1,0 +1,32 @@
+      BEGIN;                                                                    
+    1     PROJECT, KIWI, GRUPO13, 18/07/2022;                                   
+    2     DISCRETE, 100, 4, 3;                                                  
+                                                                                
+    3     TALLIES:    1, TIEMPOFAC:                                             
+                      2, TIEMPO SISTEMA;                                        
+                                                                                
+    4     COUNTERS:   1, CLIENT TARJETA:                                        
+                      2, CLIENT EFECTIVO:                                       
+                      3, CLIENT FALLAS;                                         
+                                                                                
+    5     RESOURCES:  1, FACTURACION:                                           
+                      2, BODEGA:                                                
+                      3, REVISION;                                              
+                                                                                
+    6     PARAMETERS: 1,0.13:                                                   
+                      2,1.2:                                                    
+                      3,1.1:                                                    
+                      4,10.5:                                                   
+                      5,5,1:                                                    
+                      6,2,3:                                                    
+                      7,5;                                                      
+                                                                                
+    7     DSTAT:      1, NQ(1), COLA FACTURACION:                               
+                      2, NQ(2), COLA BODEGA:                                    
+                      3, NQ(3), COLA REVISION:                                  
+                      4, NR(1), UTIL FACTURACION:                               
+                      5, NR(2), UTIL BODEGA:                                    
+                      6, NR(3), UTIL REVISION;                                  
+                                                                                
+    8     REPLICATE, 5, 0, 480;                                                 
+      END;                                                                      

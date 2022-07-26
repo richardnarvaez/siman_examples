@@ -1,0 +1,35 @@
+      BEGIN;                                                                    
+    1     PROJECT, PRUEBA, GRUPO13, 18/07/2022;                                 
+    2     DISCRETE, 100, 10, 7;                                                 
+                                                                                
+    3     PARAMETERS: 1, 10:                                                    
+                      2, 0:                                                     
+                      3, 0:                                                     
+                      4, 0:                                                     
+                      5, 3:                                                     
+                      6, 5:                                                     
+                      7, 7:                                                     
+                      8, 2, 3;                                                  
+                                                                                
+    4     TALLIES:    1, TTIEMPOENSISTEMA;                                      
+                                                                                
+    5     COUNTERS:   1, COUNTER1EMPAQUETADO:                                   
+                      2, COUNTER2RECHAZADO;                                     
+                                                                                
+    6     RESOURCES:  1, MAQUINA1:                                              
+                      2, MAQUINA2:                                              
+                      3, MAQUINA3:                                              
+                      4, MAQUINA4:                                              
+                      5, INSPECTOR:                                             
+                      6, MONTACARGAS:                                           
+                      7, EMPLEADO;                                              
+                                                                                
+    7     DSTAT:      1,NQ(1),TCOLAMAQ1:                                        
+                      2,NQ(2),AVGTMAQ2:                                         
+                      3,NQ(3),CTALLERP:                                         
+                      4,NR(1),UTALLERM:                                         
+                      5,NR(2),UTRACTOR:                                         
+                      6,NR(3),UTALLERP;                                         
+                                                                                
+    8     REPLICATE, 1, 0, 480;                                                 
+      END;                                                                      

@@ -1,0 +1,34 @@
+BEGIN;
+    PROJECT, PP, GRUPO13, 26/07/2022;
+;Max Entidades, Max Atributos, Max Colas
+    DISCRETE, 200, 3, 3;
+    
+    PARAMETERS: 1, 4:
+                2, 3.33:
+                3, 5:
+                4, 3, 5;
+
+    TALLIES:    1, TIEMPO_PIEZAS_ALL;
+    
+    COUNTERS:   1, SOL ADMINISTRATIVAS:
+                2, SOL MEDICAS:
+                3, PED IEES;
+    
+    RESOURCES:  1, MAQUINA1:
+                2, MAQUINA2:
+                3, MAQUINA3:
+                4, MAQUINA4:
+                5, MONTACARGAS;
+    
+
+    
+    DSTAT:      1, NQ(1), COLA_MAQUINA_1:
+                2, NQ(2), COLA_MAQUINA_2:
+                3, NQ(3), COLA_MAQUINA_3:
+                4, NR(1), UTIL_VENTANILLA:
+                5, NR(2), UTIL_ADMINISTRACION:
+                6, NR(3), UTIL_AUDITORIA;
+    
+    REPLICATE, 1, 0, 480;
+
+END;

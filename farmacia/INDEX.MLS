@@ -1,0 +1,18 @@
+      BEGIN;                                                                    
+    1 CREATE:EX(1,1);                                                           
+    2 QUEUE,1,4,APREND:MARK(1);                                                 
+    3 SEIZE:FARMACEUTICO;                                                       
+    4 TALLY:1,INT(1);                                                           
+    5 DELAY:EX(2,1);                                                            
+    6 RELEASE: FARMACEUTICO;                                                    
+    7 COUNT:1:NEXT(CAJER);                                                      
+    8 APREND QUEUE,2:MARK(2);                                                   
+    9 SEIZE:APRENDIZ;                                                           
+   10 TALLY:2,INT(2);                                                           
+   11 DELAY:EX(3,1);                                                            
+   12 RELEASE: APRENDIZ;                                                        
+   13 CAJER QUEUE,3;                                                            
+   14 SEIZE:CAJERO;                                                             
+   15 DELAY:EX(4,1);                                                            
+   16 RELEASE:CAJERO:DISPOSE;                                                   
+      END;                                                                      

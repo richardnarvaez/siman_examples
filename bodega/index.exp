@@ -1,0 +1,26 @@
+BEGIN;
+    PROJECT, BODEGA, RICHJHO, 7/18/2022;
+;maximo de entidades, maximo de atributos, maximo de colas
+    DISCRETE, 100, 2, 3;
+
+    PARAMETERS: 1, 5:
+                2, 3:
+                3, 6:
+                4, 2;
+
+    COUNTERS:   1, CANT. BODEGUERO:
+                2, CANT. PRACTICANTE;
+
+    RESOURCES:  1, BODEGUERO:
+                2, PRACTICANTE:
+                3, REGISTRADOR;
+
+    TALLIES:    1, TESPERABODEGUERO:
+                2, TESPERAPRACTICANTE;
+
+    DSTAT:      1, NR(1), UTIL BODEGUERO:
+                2, NR(2), UTIL PRACTICANTE:
+                3, NR(3), UTIL REGISTRADOR:
+                5, NQ(3), COLA REGISTRO;
+    REPLICATE, 5, 0, 480;
+END;

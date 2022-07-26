@@ -1,0 +1,22 @@
+      BEGIN;                                                                    
+    1     CREATE: EX(1, 1): MARK(1);                                            
+                                                                                
+    2     PRBODEGUERO ASSIGN: A(2) = 1;                                         
+    3     QUEUE, 1, 2, PRPRACT;                                                 
+    4     SEIZE: BODEGUERO;                                                     
+    5     DELAY: EX(2,2);                                                       
+    6     RELEASE: BODEGUERO: NEXT(PRREGISTRO);                                 
+                                                                                
+    7     PRPRACT ASSIGN: A(2) = 2;                                             
+    8     QUEUE, 2;                                                             
+    9     SEIZE: PRACTICANTE;                                                   
+   10     DELAY: EX(3,3);                                                       
+   11     RELEASE: PRACTICANTE;                                                 
+                                                                                
+   12     PRREGISTRO COUNT: A(2);                                               
+   13     QUEUE, 3;                                                             
+   14     SEIZE: REGISTRADOR;                                                   
+   15     DELAY: NP(4,4);                                                       
+   16     RELEASE: REGISTRADOR;                                                 
+   17     TALLY: A(2),INT(1): DISPOSE;                                          
+      END;                                                                      

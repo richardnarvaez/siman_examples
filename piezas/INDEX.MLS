@@ -1,0 +1,67 @@
+      BEGIN;                                                                    
+                                                                                
+    1     CREATE: EX(1,2): MARK(1);                                             
+      ;PRIO                                                                     
+    2     ASSIGN: A(2)=2;                                                       
+      ;STATUS                                                                   
+    3     ASSIGN: A(3)=1;                                                       
+      ;TTRASLADO                                                                
+    4     ASSIGN: A(4)=2;                                                       
+                                                                                
+    5     PROCESS1    QUEUE, 1;                                                 
+    6                 SEIZE: MAQUINA1;                                          
+    7                 DELAY: EX(5, 3);                                          
+    8                 RELEASE: MAQUINA1;                                        
+                                                                                
+    9     TRASLADO    QUEUE, 2;                                                 
+   10                 SEIZE: MONTACARGAS;                                       
+   11                 DELAY: EX(A(4), 1);                                       
+   12                 RELEASE: MONTACARGAS;                                     
+   13     BRANCH, 1:                                                            
+              IF, A(3) .EQ. 1, PROCESS2:                                        
+              IF, A(3) .EQ. 2, PROCESS3:                                        
+              IF, A(3) .EQ. 3, PROCESS4:                                        
+              ELSE, PROCESS3;                                                   
+                                                                                
+   14     PROCESS2    QUEUE, 3;                                                 
+   15                 SEIZE: MAQUINA2;                                          
+   16                 DELAY: EX(5, 3);                                          
+   17                 ASSIGN: A(3)=2;                                           
+   18                 ASSIGN: A(4)=3;                                           
+   19                 RELEASE: MAQUINA2: NEXT(TRASLADO);                        
+                                                                                
+   20     PROCESS3    QUEUE, 4;                                                 
+   21                 SEIZE: MAQUINA3;                                          
+   22                 DELAY: EX(5, 3);                                          
+   23                 RELEASE: MAQUINA3: NEXT(VERIFICACION);                    
+                                                                                
+   24     PROCESS4    QUEUE, 5;                                                 
+   25                 SEIZE: MAQUINA4;                                          
+   26                 DELAY: EX(5, 3);                                          
+   27                 ASSIGN: A(3)=4;                                           
+   28                 ASSIGN: A(2)=1;                                           
+   29                 ASSIGN: A(4)=7;                                           
+   30                 RELEASE: MAQUINA4: NEXT(TRASLADO);                        
+                                                                                
+   31     VERIFICACION    QUEUE, 6;                                             
+   32                 SEIZE: INSPECTOR;                                         
+   33                 DELAY: UN(8, 3);                                          
+   34                 RELEASE: INSPECTOR;                                       
+                                                                                
+   35     BRANCH, 2:                                                            
+              WITH, 0.70, EMPAQUETADO:                                          
+              WITH, 0.30, CHANGEDIR2;                                           
+                                                                                
+   36     CHANGEDIR2  ASSIGN: A(3)=3;                                           
+   37                 COUNT: A(2);                                              
+   38                 ASSIGN: A(4)=7: NEXT(TRASLADO);                           
+                                                                                
+   39     EMPAQUETADO     QUEUE, 7;                                             
+   40                     SEIZE: EMPLEADO;                                      
+   41                     DELAY: EX(6, 3);                                      
+   42                     RELEASE: EMPLEADO;                                    
+                                                                                
+   43     SALIDA COUNT: A(2);                                                   
+   44         TALLY: 1, INT(1): DISPOSE;                                        
+                                                                                
+      END;                                                                      

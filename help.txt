@@ -1,0 +1,27 @@
+FUNCIONAES
+
+Distribuciones aleatorias
+    EX(IP,IS) Distribución exponencial.
+    UN(IP,IS) Distribución uniforme.
+    TR(IP,IS) Distribución triangular.
+    RN(IP,IS) Distribución normal.
+    NP(IP,IS) Distribución poisson.
+    DP(IP,IS) Distribución de probabilidad discreta.
+    RL(IP,IS) Distribución lognormal.
+    GA(IP,IS) Distribución gamma.
+    BE(IP,IS) Distribución beta.
+    WE(IP,IS) Distribución Weibull.
+    CO(IP) Una constante.
+    RA(IS) Número aleatorio uniforme en el intervalo 0-1. ED(I) Distribución experimental número I.
+
+
+Variables SIMAN Descripción
+    TNOW Tiempo en curso en el sistema.
+    NE(I) Número de entidades que van a la estación I.
+    NQ(I) Número de entidades que esperan en la cola I.
+    NC(I) Valor del contador I.
+    NR(I) Número de unidades ocupadas del recurso I.
+    NT(I) Número de unidades ocupadas del transportador I. MR(I) Número de unidades del recurso I.
+    MT(I) Número de unidades del transportador I.
+    LC(I) Longitud de las celdas ocupadas en el conveyor I.
+

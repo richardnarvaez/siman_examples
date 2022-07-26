@@ -1,0 +1,35 @@
+BEGIN;
+    PROJECT, PRUEBA, GRUPO13, 18/07/2022;
+    DISCRETE, 100, 10, 7;
+    
+    PARAMETERS: 1, 10:
+                2, 0:
+                3, 0:
+                4, 0:
+                5, 3:
+                6, 5:
+                7, 7:
+                8, 2, 3;
+
+    TALLIES:    1, TTIEMPOENSISTEMA;
+
+    COUNTERS:   1, COUNTER1EMPAQUETADO:
+                2, COUNTER2RECHAZADO;
+
+    RESOURCES:  1, MAQUINA1:
+                2, MAQUINA2:
+                3, MAQUINA3:
+                4, MAQUINA4:
+                5, INSPECTOR:
+                6, MONTACARGAS:
+                7, EMPLEADO;
+
+    DSTAT:      1,NQ(1),TCOLAMAQ1:
+                2,NR(2),NoColMAQ2:
+                3,NQ(3),CTALLERP:
+                4,NR(1),UTALLERM:
+                5,NR(2),UTRACTOR:
+                6,NR(3),UTALLERP;
+
+    REPLICATE, 1, 0, 480;
+END;

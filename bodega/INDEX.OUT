@@ -1,0 +1,193 @@
+
+
+
+                           SIMAN IV - License #9150435
+                                   ETS DE GIJON                   
+
+                         Summary for Replication 1 of 5
+  
+ Project:  BODEGA                               Run execution date :  18/ 7/2022
+ Analyst:  RICHJHO                              Model revision date:   7/18/2022
+  
+ Replication ended at time      : 480.0
+  
+                                 TALLY VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Observations
+ _______________________________________________________________________________
+  
+ TESPERABODEGUERO        8.6859     .69335     .20981     27.818         76    
+ TESPERAPRACTICANTE      10.201     .45698     2.8269     17.789         10    
+  
+                            DISCRETE-CHANGE VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Final Value 
+ _______________________________________________________________________________
+  
+ UTIL BODEGUERO          .51098     .97829     .00000     1.0000     1.0000    
+ UTIL PRACTICANTE        .09232     3.1355     .00000     1.0000     .00000    
+ UTIL REGISTRADOR        .36458     1.3202     .00000     1.0000     .00000    
+ COLA REGISTRO           .20161     3.1601     .00000     4.0000     .00000    
+  
+                                     COUNTERS
+  
+                     Identifier                Count   Limit
+                     _________________________________________
+  
+                     CANT.BODEGUERO               76  Infinite
+                     CANT.PRACTICANTE             10  Infinite
+
+
+
+                           SIMAN IV - License #9150435
+                                   ETS DE GIJON                   
+
+                         Summary for Replication 2 of 5
+  
+ Project:  BODEGA                               Run execution date :  18/ 7/2022
+ Analyst:  RICHJHO                              Model revision date:   7/18/2022
+  
+ Replication ended at time      : 480.0
+  
+                                 TALLY VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Observations
+ _______________________________________________________________________________
+  
+ TESPERABODEGUERO        7.2913     .66793     .93945     22.626         82    
+ TESPERAPRACTICANTE      7.3988     1.1085     1.3010     19.505          4    
+  
+                            DISCRETE-CHANGE VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Final Value 
+ _______________________________________________________________________________
+  
+ UTIL BODEGUERO          .50681     .98648     .00000     1.0000     .00000    
+ UTIL PRACTICANTE        .02307     6.5078     .00000     1.0000     .00000    
+ UTIL REGISTRADOR        .36667     1.3143     .00000     1.0000     .00000    
+ COLA REGISTRO           .13032     3.6199     .00000     3.0000     .00000    
+  
+                                     COUNTERS
+  
+                     Identifier                Count   Limit
+                     _________________________________________
+  
+                     CANT.BODEGUERO               82  Infinite
+                     CANT.PRACTICANTE              4  Infinite
+
+
+
+                           SIMAN IV - License #9150435
+                                   ETS DE GIJON                   
+
+                         Summary for Replication 3 of 5
+  
+ Project:  BODEGA                               Run execution date :  18/ 7/2022
+ Analyst:  RICHJHO                              Model revision date:   7/18/2022
+  
+ Replication ended at time      : 480.0
+  
+                                 TALLY VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Observations
+ _______________________________________________________________________________
+  
+ TESPERABODEGUERO        7.8391     .58039     .21180     19.376         94    
+ TESPERAPRACTICANTE      11.545     .47059     3.8653     17.793          7    
+  
+                            DISCRETE-CHANGE VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Final Value 
+ _______________________________________________________________________________
+  
+ UTIL BODEGUERO          .58878     .83572     .00000     1.0000     .00000    
+ UTIL PRACTICANTE        .08905     3.1984     .00000     1.0000     .00000    
+ UTIL REGISTRADOR        .39375     1.2408     .00000     1.0000     .00000    
+ COLA REGISTRO           .24047     2.8234     .00000     4.0000     .00000    
+  
+                                     COUNTERS
+  
+                     Identifier                Count   Limit
+                     _________________________________________
+  
+                     CANT.BODEGUERO               94  Infinite
+                     CANT.PRACTICANTE              7  Infinite
+
+
+
+                           SIMAN IV - License #9150435
+                                   ETS DE GIJON                   
+
+                         Summary for Replication 4 of 5
+  
+ Project:  BODEGA                               Run execution date :  18/ 7/2022
+ Analyst:  RICHJHO                              Model revision date:   7/18/2022
+  
+ Replication ended at time      : 480.0
+  
+                                 TALLY VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Observations
+ _______________________________________________________________________________
+  
+ TESPERABODEGUERO        9.3405     .54371     1.0912     21.008        107    
+ TESPERAPRACTICANTE      14.876     .53211     1.2511     28.072         24    
+  
+                            DISCRETE-CHANGE VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Final Value 
+ _______________________________________________________________________________
+  
+ UTIL BODEGUERO          .65649     .72337     .00000     1.0000     1.0000    
+ UTIL PRACTICANTE        .23430     1.8078     .00000     1.0000     .00000    
+ UTIL REGISTRADOR        .52917     .94327     .00000     1.0000     .00000    
+ COLA REGISTRO           .58216     1.7751     .00000     6.0000     .00000    
+  
+                                     COUNTERS
+  
+                     Identifier                Count   Limit
+                     _________________________________________
+  
+                     CANT.BODEGUERO              107  Infinite
+                     CANT.PRACTICANTE             24  Infinite
+
+
+
+                           SIMAN IV - License #9150435
+                                   ETS DE GIJON                   
+
+                         Summary for Replication 5 of 5
+  
+ Project:  BODEGA                               Run execution date :  18/ 7/2022
+ Analyst:  RICHJHO                              Model revision date:   7/18/2022
+  
+ Replication ended at time      : 480.0
+  
+                                 TALLY VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Observations
+ _______________________________________________________________________________
+  
+ TESPERABODEGUERO        6.9257     .68047     1.1967     22.734         92    
+ TESPERAPRACTICANTE      7.1748     .42334     4.1253     10.200          3    
+  
+                            DISCRETE-CHANGE VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Final Value 
+ _______________________________________________________________________________
+  
+ UTIL BODEGUERO          .53697     .92861     .00000     1.0000     1.0000    
+ UTIL PRACTICANTE        .01676     7.6590     .00000     1.0000     1.0000    
+ UTIL REGISTRADOR        .37708     1.2853     .00000     1.0000     .00000    
+ COLA REGISTRO           .13766     3.0988     .00000     3.0000     .00000    
+  
+                                     COUNTERS
+  
+                     Identifier                Count   Limit
+                     _________________________________________
+  
+                     CANT.BODEGUERO               92  Infinite
+                     CANT.PRACTICANTE              3  Infinite
+  
+ Run Time: 0 min(s)  3 sec(s)
+ Simulation run complete.

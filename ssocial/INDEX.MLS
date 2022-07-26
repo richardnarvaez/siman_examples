@@ -1,0 +1,25 @@
+      BEGIN;                                                                    
+    1 CREATE: EX(1, 2): MARK(1);                                                
+    2 QUEUE, 1;                                                                 
+    3 SEIZE: VENTANILLA;                                                        
+    4 DELAY: EX(2, 1);                                                          
+    5 RELEASE: VENTANILLA;                                                      
+    6 BRANCH, 1:                                                                
+      WITH, 0.30, ADMIN:                                                        
+      WITH, 0.70, MEDICO;                                                       
+    7 ADMIN QUEUE, 2;                                                           
+    8 SEIZE: ADMINISTRADOR;                                                     
+    9 DELAY: NP(3, 1);                                                          
+   10 RELEASE: ADMINISTRADOR;                                                   
+   11 COUNT: 1: DISPOSE;                                                        
+   12 MEDICO QUEUE, 3;                                                          
+   13 SEIZE: MEDICO;                                                            
+   14 DELAY: UN(4, 2);                                                          
+   15 RELEASE: MEDICO;                                                          
+   16 COUNT: 2;                                                                 
+   17 BRANCH, 1:                                                                
+      WITH, 0.80, IEES:                                                         
+      WITH, 0.20, SALIDA;                                                       
+   18 IEES COUNT: 3;                                                            
+   19 SALIDA TALLY: 1, INT(1): DISPOSE;                                         
+      END;                                                                      

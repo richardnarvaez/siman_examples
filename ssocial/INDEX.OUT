@@ -1,0 +1,43 @@
+
+
+
+                           SIMAN IV - License #9150435
+                                   ETS DE GIJON                   
+
+                         Summary for Replication 1 of 1
+  
+ Project:  SOLI                                 Run execution date :  19/ 7/2022
+ Analyst:  GRUPO13                              Model revision date:  18/ 7/2022
+  
+ Replication ended at time      : 480.0
+  
+                                 TALLY VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Observations
+ _______________________________________________________________________________
+  
+ TIEMPO SOL MED          31.361     .63612     3.8887     70.994         66    
+  
+                            DISCRETE-CHANGE VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Final Value 
+ _______________________________________________________________________________
+  
+ COLA VENTANILLA         4.9936     .97456     .00000     15.000     10.000    
+ COLA ADMINISTRACION     .07855     3.6528     .00000     2.0000     .00000    
+ COLA AUDITORIA          .33666     2.0761     .00000     4.0000     .00000    
+ UTIL VENTANILLA         .87181     .38346     .00000     1.0000     1.0000    
+ UTIL ADMINISTRACION     .39583     1.2354     .00000     1.0000     .00000    
+ UTIL AUDITORIA          .56556     .87644     .00000     1.0000     1.0000    
+  
+                                     COUNTERS
+  
+                     Identifier                Count   Limit
+                     _________________________________________
+  
+                     SOL ADMINISTRATIVAS          39  Infinite
+                     SOL MEDICAS                  66  Infinite
+                     PED IEES                     51  Infinite
+  
+ Run Time: 0 min(s)  1 sec(s)
+ Simulation run complete.

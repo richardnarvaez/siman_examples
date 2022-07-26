@@ -1,0 +1,42 @@
+
+
+
+                           SIMAN IV - License #9150435
+                                   ETS DE GIJON                   
+
+                         Summary for Replication 1 of 1
+  
+ Project:  PRUEBA                               Run execution date :  20/ 7/2022
+ Analyst:  GRUPO13                              Model revision date:  18/ 7/2022
+  
+ Replication ended at time      : 480.0
+  
+                                 TALLY VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Observations
+ _______________________________________________________________________________
+  
+ TTIEMPOENSISTEMA        45.892     .59602     7.9116     154.18         45    
+  
+                            DISCRETE-CHANGE VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Final Value 
+ _______________________________________________________________________________
+  
+ TCOLAMAQ1               .09574     3.6830     .00000     3.0000     .00000    
+ AVGTMAQ2                1.0717     1.3631     .00000     5.0000     .00000    
+ CTALLERP                .18665     2.9168     .00000     3.0000     .00000    
+ UTALLERM                .26901     1.6484     .00000     1.0000     .00000    
+ UTRACTOR                .24575     1.7519     .00000     1.0000     .00000    
+ UTALLERP                .44517     1.1164     .00000     1.0000     .00000    
+  
+                                     COUNTERS
+  
+                     Identifier                Count   Limit
+                     _________________________________________
+  
+                     COUNTER1EMPAQUETADO          19  Infinite
+                     COUNTER2RECHAZADO            47  Infinite
+  
+ Run Time: 0 min(s)  1 sec(s)
+ Simulation run complete.

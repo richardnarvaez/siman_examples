@@ -1,0 +1,47 @@
+
+
+
+                           SIMAN IV - License #9150435
+                                   ETS DE GIJON                   
+
+                         Summary for Replication 1 of 5
+  
+ Project:  KIWI                                 Run execution date :  19/ 7/2022
+ Analyst:  GRUPO13                              Model revision date:  18/ 7/2022
+  
+ Replication ended at time      : 480.0
+  
+                                 TALLY VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Observations
+ _______________________________________________________________________________
+  
+ TIEMPOFAC               56.751     .47257     .09805     100.49        467    
+ TIEMPO SISTEMA          82.122     .79890     .09805     320.22        368    
+  
+                            DISCRETE-CHANGE VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Final Value 
+ _______________________________________________________________________________
+  
+ COLA FACTURACION        70.448     .50759     .00000     147.00     145.00    
+ COLA BODEGA             43.476     .65188     .00000     92.000     90.000    
+ COLA REVISION           .06250     3.8758     .00000     2.0000     .00000    
+ UTIL FACTURACION        .99441     .07494     .00000     1.0000     1.0000    
+ UTIL BODEGA             .96855     .18019     .00000     1.0000     1.0000    
+ UTIL REVISION           .31078     1.4892     .00000     1.0000     .00000    
+  
+                                     COUNTERS
+  
+                     Identifier                Count   Limit
+                     _________________________________________
+  
+                     CLIENT TARJETA              329  Infinite
+                     CLIENT EFECTIVO             138  Infinite
+                     CLIENT FALLAS                10  Infinite
+
+ **********************************************************************
+
+ Entity: 301
+ A runtime error was detected at time 423.41 at the following block:
+ * 
