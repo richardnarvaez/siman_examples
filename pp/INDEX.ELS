@@ -1,34 +1,42 @@
       BEGIN;                                                                    
-    1     PROJECT, PP, GRUPO13, 26/07/2022;                                     
-      ;Max Entidades, Max Atributos, Max Colas                                  
-    2     DISCRETE, 200, 3, 3;                                                  
+    1     PROJECT, PP, RICHARD, 26/07/2022;                                     
                                                                                 
-    3     PARAMETERS: 1, 4:                                                     
-                      2, 3.33:                                                  
+      ; Max Entidades, Max Atributos, Max Colas                                 
+    2     DISCRETE, 300, 4, 6;                                                  
+                                                                                
+    3     PARAMETERS: 1, 8:                                                     
+                      2, 0.1667:                                                
                       3, 5:                                                     
                       4, 3, 5;                                                  
                                                                                 
-    4     TALLIES:    1, TIEMPO_PIEZAS_ALL;                                     
+    4     TALLIES:    1, TIEMPO_PIEZAS_T1:                                      
+                      2, TIEMPO_PIEZAS_T2:                                      
+                      3, TIEMPO_PIEZAS_ALL;                                     
                                                                                 
-    5     COUNTERS:   1, SOL ADMINISTRATIVAS:                                   
-                      2, SOL MEDICAS:                                           
-                      3, PED IEES;                                              
+    5     COUNTERS:   1, COUNT_PIEZA_TIPO_1:                                    
+                      2, COUNT_PIEZA_TIPO_2:                                    
+                      3, COUNT_PIEZAS_TOTAL:                                    
+                      4, COUNT_PIEZAS_TOTAL_TATAL;                              
                                                                                 
+      ; ID, NOMBRE, K - NUMERO SERVIDORES                                       
     6     RESOURCES:  1, MAQUINA1:                                              
                       2, MAQUINA2:                                              
                       3, MAQUINA3:                                              
                       4, MAQUINA4:                                              
                       5, MONTACARGAS;                                           
                                                                                 
-                                                                                
-                                                                                
     7     DSTAT:      1, NQ(1), COLA_MAQUINA_1:                                 
                       2, NQ(2), COLA_MAQUINA_2:                                 
                       3, NQ(3), COLA_MAQUINA_3:                                 
-                      4, NR(1), UTIL_VENTANILLA:                                
-                      5, NR(2), UTIL_ADMINISTRACION:                            
-                      6, NR(3), UTIL_AUDITORIA;                                 
+                      4, NQ(4), COLA_MAQUINA_4:                                 
+                      5, NQ(5), COLA_MONTACARGAS:                               
+                      6, NR(1), UTIL_MAQUINA_1:                                 
+                      7, NR(2), UTIL_MAQUINA_2:                                 
+                      8, NR(3), UTIL_MAQUINA_3:                                 
+                      9, NR(4), UTIL_MAQUINA_4:                                 
+                      10, NR(5), UTIL_MONTACARGAS;                              
                                                                                 
+      ; NUMERO DE VECES, TIEMPO INICIAL, TIEMPO POR VEZ H, M, S                 
     8     REPLICATE, 1, 0, 480;                                                 
                                                                                 
       END;                                                                      

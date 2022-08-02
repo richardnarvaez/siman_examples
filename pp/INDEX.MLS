@@ -1,34 +1,61 @@
       BEGIN;                                                                    
                                                                                 
     1     CREATE: EX(1, 2): MARK(1);                                            
-    2     ASSIGN: A(3)=1: NEXT(PROCESSM1);                                      
+    2         ASSIGN: A(3)=1;                                                   
+    3         ASSIGN: X(1)=1: NEXT(PROCESSM1);                                  
                                                                                 
-    3     CREATE: EX(2, 2): MARK(1);                                            
-    4     ASSIGN: A(3)=2: NEXT(PROCESSM2);                                      
+    4     CREATE: EX(2, 2): MARK(1);                                            
+    5         ASSIGN: A(3)=2;                                                   
+    6         ASSIGN: X(1)=1: NEXT(PROCESSM2);                                  
                                                                                 
-    5     PROCESSM1 QUEUE, 1;                                                   
-    6         SEIZE: MAQUINA1;                                                  
-    7         DELAY: EX(3, 2);                                                  
-    8         RELEASE: MAQUINA1;                                                
+    7     PROCESSM1 QUEUE, 1;                                                   
+    8         SEIZE: MAQUINA1;                                                  
+    9         DELAY: EX(3, 2);                                                  
+   10         RELEASE: MAQUINA1;                                                
+   11         COUNT: 1;                                                         
                                                                                 
-    9     BRANCH, 1:                                                            
-              IF, A(3) .EQ. 1, TRASLADO:                                        
-              ELSE, PROCESSM2;                                                  
+   12     BRANCH, 1:                                                            
+              IF, (A(3).EQ.1).AND.(X(1).EQ.1), T1TO2:                           
+              ELSE, T1TO3;                                                      
                                                                                 
-   10     PROCESSM2 QUEUE, 2;                                                   
-   11         SEIZE: MAQUINA2;                                                  
-   12         DELAY: EX(3, 2);                                                  
-   13         RELEASE: MAQUINA2;                                                
+   13     PROCESSM2 QUEUE, 2;                                                   
+   14         SEIZE: MAQUINA2;                                                  
+   15         DELAY: EX(3, 2);                                                  
+   16         RELEASE: MAQUINA2;                                                
+   17         COUNT: 2;                                                         
                                                                                 
-   14     BRANCH, 1:                                                            
-              IF, A(3) .EQ. 2, TRASLADO:                                        
-              ELSE, PROCESSM1;                                                  
+   18     BRANCH, 1:                                                            
+              IF, (A(3).EQ.2).AND.(X(1).EQ.1), T1TO2:                           
+              ELSE, T1TO3;                                                      
                                                                                 
-   15     TRASLADO QUEUE, 3;                                                    
-   16         SEIZE: MONTACARGAS;                                               
-   17         DELAY: EX(3, 2);                                                  
-   18         RELEASE: MONTACARGAS;                                             
+   19     T1TO2 ASSIGN: X(1)=2: NEXT(TRASLADO);                                 
+   20     T1TO3 ASSIGN: X(1)=3: NEXT(TRASLADO);                                 
                                                                                 
-   19     SALIDA TALLY: 1, INT(1): DISPOSE;                                     
+   21     TRASLADO QUEUE, 3;                                                    
+   22         SEIZE: MONTACARGAS;                                               
+   23         DELAY: EX(3, 2);                                                  
+   24         RELEASE: MONTACARGAS;                                             
+                                                                                
+   25     COUNT: 3;                                                             
+                                                                                
+   26     BRANCH, 1:                                                            
+              IF, (A(3).EQ.1).AND.(X(1).EQ.2), PROCESSM2:                       
+              IF, (A(3).EQ.2).AND.(X(1).EQ.2), PROCESSM1:                       
+              IF, (A(3).EQ.1).AND.(X(1).EQ.3), PROCESSM3:                       
+              ELSE, PROCESSM4;                                                  
+                                                                                
+   27     PROCESSM3 QUEUE, 4;                                                   
+   28         SEIZE: MAQUINA3;                                                  
+   29         DELAY: EX(3, 2);                                                  
+   30         RELEASE: MAQUINA3: NEXT(PROCESSM4);                               
+                                                                                
+   31     PROCESSM4 QUEUE, 5;                                                   
+   32         SEIZE: MAQUINA4;                                                  
+   33         DELAY: EX(3, 2);                                                  
+   34         RELEASE: MAQUINA4;                                                
+                                                                                
+      ;ID A GUARDAR,  ID TO MIN TNOW                                            
+   35     SALIDA TALLY: 3, INT(1);                                              
+   36         TALLY: A(3), INT(1): DISPOSE;                                     
                                                                                 
       END;                                                                      

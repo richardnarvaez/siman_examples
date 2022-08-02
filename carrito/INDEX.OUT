@@ -1,0 +1,38 @@
+
+
+
+                           SIMAN IV - License #9150435
+                                   ETS DE GIJON                   
+
+                         Summary for Replication 1 of 1
+  
+ Project:  EJERCICIO17                          Run execution date :  27/ 7/2022
+ Analyst:  GRUPO4                               Model revision date:  19/ 7/2022
+  
+ Replication ended at time      : 200.0
+  
+                                 TALLY VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Observations
+ _______________________________________________________________________________
+  
+ TPO CLIENTES MAS 10P    10.059     .71166     .72505     34.170         71    
+  
+                            DISCRETE-CHANGE VARIABLES
+  
+ Identifier              Average   Variation   Minimum    Maximum   Final Value 
+ _______________________________________________________________________________
+  
+ CARRITO                 .00000         --     .00000     .00000     .00000    
+ CAJA_EXPRESS            .14667     3.5217     .00000     4.0000     .00000    
+ CAJA_NORMAL             .00000         --     .00000     .00000     .00000    
+ UTIL CARRITOS           26.164     .38595     .00000     42.000     34.000    
+  
+                                     COUNTERS
+  
+                     Identifier                Count   Limit
+                     _________________________________________
+  
+                     USUARIOS ATEND CAJA_EX       72  Infinite
+                     USUARIOS ATEND CAJA_NO       78  Infinite
+ Simulation run complete.

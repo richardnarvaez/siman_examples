@@ -1,0 +1,30 @@
+
+ ----------------------------------------------------------------------
+ A linker warning was detected while processing DSTATS          
+ WARNING: Symbol name CARRITO, already used in instance 1 of RESOURCES
+ 0275:CCKNAM
+ ----------------------------------------------------------------------
+
+
+
+ ----------------------------------------------------------------------
+ A linker warning was detected
+ Insufficient array space for 500 entities specified on DISCRETE.
+ 0479:LINKER
+ ----------------------------------------------------------------------
+
+
+
+
+                                Space Utilization 
+          Category    Quantity  Numeric  Character
+          ----------  --------  -------  ---------
+          Elements           9     5.4%       3.3%
+          Blocks            21     6.4%       4.5%
+          Entities         313    62.6%
+          Attributes     2 per    25.0%
+                        entity
+          ----------            -------  ---------
+          TOTAL                   99.5%       7.8%
+          Maximum Size            5000      10000
+

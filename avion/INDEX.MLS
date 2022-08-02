@@ -46,7 +46,8 @@
    26     COMPARANAVE BRANCH,1:                                                 
               IF,A(5) .EQ. 1, CONTADORNAVE:                                     
               ELSE, NAVEPRINCIPAL;                                              
-   27         CONTADORNAVE COUNT:3,1:NEXT(NAVEPRINCIPAL);                       
+                                                                                
+   27     CONTADORNAVE COUNT:3,1:NEXT(NAVEPRINCIPAL);                           
    28         NAVEPRINCIPAL DELAY:EX(8,4);                                      
    29         COUNT:1,1: DISPOSE;                                               
    30         COMPARAREX BRANCH,1:                                              

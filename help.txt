@@ -25,3 +25,14 @@ Variables SIMAN Descripción
     MT(I) Número de unidades del transportador I.
     LC(I) Longitud de las celdas ocupadas en el conveyor I.
 
+CONDICION: 
+Instrucción que relaciona expresiones mediante los operadores 
+".OR." (disyunción)
+".AND." (conjunción)
+".EQ." (igualdad)
+".LT." (menor que)
+".GT." (mayor que)
+".LE." (menor e igual)
+".GE." (mayor e igual)
+".NE." (no igual)
+con grupos formados utilizando paréntesis “()”

@@ -1,0 +1,25 @@
+      BEGIN;                                                                    
+    1  CREATE:EX(1,1);                                                          
+    2 SELECCIONAR_CARRITO QUEUE,1;                                              
+    3  SEIZE:CARRITO;                                                           
+    4  BRANCH,1:                                                                
+       WITH,0.4,NMDPRODUCTOS:                                                   
+       WITH,0.6,MDPRODUCTOS;                                                    
+    5 NMDPRODUCTOS ASSIGN:A(2)=1:MARK(1);                                       
+    6  DELAY:EX(4,4):NEXT(CAJA_EXPRESS);                                        
+    7 MDPRODUCTOS ASSIGN:A(2)=2;                                                
+    8  DELAY:EX(5,5):NEXT(CAJA_NORMAL);                                         
+    9 CAJA_EXPRESS QUEUE,2;                                                     
+   10  SEIZE:CAJAE;                                                             
+   11  COUNT:A(2);                                                              
+   12  DELAY:EX(2,2);                                                           
+   13  RELEASE:CAJAE;                                                           
+   14  RELEASE:CARRITO;                                                         
+   15  TALLY:1,INT(1):DISPOSE;//LIT A                                           
+   16 CAJA_NORMAL QUEUE,3;                                                      
+   17  SEIZE:CAJAN;                                                             
+   18  COUNT:A(2);                                                              
+   19  RELEASE:CAJAN;                                                           
+   20  RELEASE:CARRITO;                                                         
+   21  DELAY:UN(3,3):DISPOSE;                                                   
+      END;                                                                      
